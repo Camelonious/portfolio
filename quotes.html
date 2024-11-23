@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<!--		
+		Title: Quotes
+		Description: Quotes I like.
+		Created by: Camille Crawford
+		Created on: October 19, 2024
+-->
+<html lang ="en">
+	<head>
+        <meta charset="utf-8">
+		<meta name="author" content="Camille Crawford">
+		<meta name="viewport" content="width-device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="index.css">
+		<title>Quotes</title>
+		<link rel="icon" type="image/x-icon" href="art/cnLogo.PNG">
+
+<style>
+/* CSS reset */
+body, head, header, main, section, footer, h1, h2, p, h3, btn {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Style for html */
+html {
+	display: flex; 
+	justify-content: center;
+}
+
+
+/* LISTS UL AND LI */
+
+/* Styles for navigation bars */
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #40b5cc;
+  letter-spacing: 1.5px;
+}
+ 
+li {
+  float: left;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #5fdecf;
+}
+
+
+
+/* INPUT STYLES */
+
+/* Styles for text*/
+input[type="text"] {
+	border: 2px solid black;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 14px 40px;
+	font-size: 20px;
+	font-family: Arial, Verdana, sans-serif;
+	font-weight: bold;
+}
+
+/* Styles for submit*/
+input[type="submit"] {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 14px 40px;
+	font-size: 20px;
+	font-family: Arial, Verdana, sans-serif;
+	font-weight: bold;
+}
+
+/* Styles for reset */
+input[type="reset"] {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 14px 40px;
+	font-size: 20px;
+	font-family: Arial, Verdana, sans-serif;
+	font-weight: bold;
+}
+
+/* Style for body */
+body {
+	margin-left: 20px;
+	color: black;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	padding-inline-start: 50px;
+	padding-inline-end: 50px;
+	font-family: Arial, Verdana, sans-serif;
+}
+
+section {
+	margin: auto;
+	justify-content: center;
+	font-size: 3rem;
+	border: 2px solid #000000;
+	padding: 14px 16px;
+}
+
+
+/* HEADINGS */
+h1 {
+	color: black;
+	font-family: Arial, Verdana, sans-serif;
+	text-align: center;
+	padding: 14px 40px;
+	border-radius: 25px;
+}
+
+h2 {
+	color: black;
+	font-family: Arial, Verdana, sans-serif;
+	text-align: center;
+}
+
+h3 {
+	color: black;
+	font-family: Arial, Verdana, sans-serif;
+	text-align: center;
+}
+
+h4 {
+	color: black;
+	font-family: Arial, Verdana, sans-serif;
+	text-align: center;
+}
+
+p {
+	color: black;
+	font-family: Arial, Verdana, sans-serif;
+}
+
+
+/* CLASSES */
+.container {
+	position: relative;
+}
+
+/*
+.resume {
+	justify-content: center;
+}
+*/
+
+/* Styles for the button */
+.button {
+	background-color: #57c0d5;
+	border: 2px solid black;
+	color: white;
+	padding: 15px 32px;
+	display: block; /* keeps button centered on page */
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	font-size: 30px;
+	border-radius: 12px;
+	transition-duration: 0.4s;
+	font-family: Arial, Verdana, sans-serif;
+	justify-content: center;
+}
+
+.button:hover {
+	background-color: #5fdecf;
+	color: white;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+.button:active {
+	background-color: #095260;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+.morse1 {
+	display: flex;
+}
+
+
+#output {
+	color: black;
+	font-family: Arial, Verdana, sans-serif;
+	text-align: left;
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 1.8;
+}
+
+
+/* YOUTUBE iframe styles */
+iframe {
+	justify-content: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 14px 40px;
+}
+
+div {
+	margin: auto;
+	justify-content: center;
+}
+
+form {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	color: black;
+	text-align: center;
+	position: static;
+	font-size: 20px;
+}
+
+form label {
+	font-size: 20px;
+	font-style: bold;
+}
+	
+/* Styles for footer */
+footer {
+	color: black;
+	font-family: Arial, Verdana, sans-serif;
+	text-align: center;
+}
+</style>	
+	
+	</head>
+	
+	<body>
+		<div id="container">
+			<header>
+			<br>
+			<div>
+				<h1>QUOTES</h1>
+				<h3>Examples of HTML, CSS, and JavaScript Skills</h3>
+				<h4>Camille Crawford</h4>
+			</div>
+			</header>
+		</div>
+		
+			<!-- Navigation bar -->
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="clock.html">Clock</a></li>
+				<li><a href="calculator.html">Calculator</a></li>
+				<li><a href="quotes.html" class="active">Quotes</a></li>
+			</ul>
+			<br>
+			<br>
+			
+	<!-- Code for the button -->
+		<button type="button" class="button" id="myButton" onclick="myFuntion()">New Quote</button>
+			<br>
+			<br>
+			<div id="output"></div>
+			<br>
+			<br>
+			
+	</body>
+	
+	<script>
+		// Quotes and their authors or speakers. NOTE: Break quotes into categories.
+			const sentences = [
+				"You have to learn to get up from the table when love is no longer being served. -Nina Simone",
+				
+				"So many folks talk about how they're being 'forced to accept' things that go against their beliefs. " +
+				"You aren't being forced to accept them. If you have a problem wih people of color, with gay marriage, " +
+				"with trans people, with immigrants, with women of any race, etc. then you're still welcome to feel " +
+				"however you want to feel about those people. You're just not allowed to make their lives harder because " +
+				"of your feelings. You're not allowed to turn their daily lives into a battle ground. "+
+				"No one is forcing you to 'accept' a single thing. " +
+				"You're just not being allowed to terrorize people. -Eddie Izzard",
+				
+				"All men's miseries derive from not being able to sit in a quiet room alone. -Blaise Pascal",
+				
+				"A wise man can play the part of a clown, but a clown can't play the part of a wise man. -Malcolm X",
+				
+				"Half gods are worshipped in wine and flowers. Real gods require blood. -Zora Neale Hurston",
+				
+				"You're not to be so blind with patriotism that you can't face reality. Wrong is wrong, " +
+				"no matter who does it or says it. -Malcolm X",
+				
+				"Nobody's free until everybody's free. -Fannie Lou Hamer",
+				
+				"The customer is always right in matters of taste. -Harry Gordon Selfridge",
+				
+				"In the end, we will remember not the words of our enemies, but the silence of our frineds. -Dr. Martin Luther King Jr.",
+				
+				"If the truth shall kill them, let them die. -Immanuel Kant",
+				
+				"But we cannot simply sit and stare at our wounds forever. -Haruki Murakami",
+				
+				"The victim who is able to articulate the situation of the victim has ceased to be a victim: " +
+				"he or she has become a threat. -James Baldwin",
+				
+				"Never attribute to malice that which is adequately explained by stupidity. -Hanlon's Razor",
+				
+				"The price we pay for being our true selves is worth it. -Eartha Kitt",
+				
+				"Most people are other people. Their thoughts are someone else's opinions, their lives a mimicry, " +
+				"their passions a quotation. -Oscar Wilde",
+				
+				"The job of the conscious is to make the unconscious conscious. -Kwame Ture",
+				
+				"We real cool. We left school. We lurk late. We strike straight. We sing sin. We thin gin. " +
+				"We jazz June. We die soon. -Gwendolyn Brooks",
+				
+				"The best way to keep a prisoner from escaping is to make sure he never knows he's in prison. -Fyodor Dostoevsky",
+				
+				"Whoever is delighted in solitude, is either a wild beast or a god. -Plato",
+				
+				"Never doubt that a small group of thoughtful committed citizens can change the world. " +
+				"Indeed, it is the only thing that ever has. -Margaret Mead",
+				
+				"Never be decieved that the rich will allow you to vote away their wealth. -Lucy Parsons",
+				
+				"Your silence will not protect you. -Audre Lorde",
+				
+				"When your rage is choking you, it is best to say nothing. -Octavia Butler",
+				
+				"Dead people receive more flowers than the living ones because regret is stronger than gratitude. -Anne Frank",
+				
+				"The bravest thing I ever did was continuing my life when I wanted to die. -Juliette Lewis",
+				
+				"Sometimes I'm terrified of my heart; of its constant hunger for whatever it is it wants. " +
+				"The way it stops and starts. -Edgar Allen Poe",
+				
+				"One of the best lessons you can learn in life is to master how to remain calm. -Bruce Lee",
+				
+				"Hate is a wasteful emotion. Most of the people you hate don't know you hate them and the rest don't care. -Medgar Evers",
+				
+				"Now is the accepted time, not tomorrow, not some more convenient season. -W.E.B. DuBois",
+				
+				"I have never cared too much what people SAY. What I am interested in is what they DO. -Shirley Chisholm",
+				
+				"When children attend schools that place a greater value on discipline and security than knowledge and intellectual development, " +
+				"they are attending prep schools for prison. -Angela Davis",
+				
+				"I have licked the fire and danced in the ashes of every bridge I ever burned. I fear no hell from you. -Nicole Lyons",
+				
+				"The way to right wrongs is to turn the light of truth upon them. -Ida B. Wells",
+				
+				"Never forget where we came from and always praise the bridges that carried you over. -Fannie Lou Hamer",
+				
+				"Deal with yourself as a individual, worthy of respect and make everyone else deal with you the same way. -Nikki Giovanni",
+				
+				"I imagine one of the reasons people cling to their hate so stubbornly is because they sense, once hate is gone, " +
+				"they will be forced to deal with pain. -James Baldwin",
+				
+				"It is easier to build strong children than to repair broken men. -Frederick Douglass",
+				
+				"If I didn't define myself for myself, I would be crunched into other people's fantasies for me and eaten alive. -Audre Lorde",
+				
+				"Education is the most powerful weapon which you can use to change the world. -Nelson Mandela",
+				
+				"Knowing how to be solitary is central to the art of loving. When we can be alone, " +
+				"we can be with others without using them as a means of escape. -bell hooks",
+				
+				"Stories are a way to preserve one's self. To be remembered. And to forget. - V.E. Schwab",
+				
+				"Children must be taught how to think, not what to think -Margaret Mead",
+				
+				"Sufficiently advanced incompetence is indistinguishable from malice. -Fred Clark's Law",
+				
+				"In order to rise from it's own ashes, a Phoenix first must burn. -Octavia Butler",
+				
+				"As for my girls, I'll raise them to think they breathe fire. -Jessica Kirkland",
+				
+				"Don't beat the drums of war unless you're ready to fight. -African Proverb",
+				
+				"You cannot truly call yourself peaceful unless you are capable of great violence. " +
+				"If you're not capable of violence, you're not peceful, you're harmless. " +
+				"Important distinction. -Unknown",
+				
+				"The things we like best are either illegal, immoral, or fattening. -Irene Dunne",
+				
+				"Let me never fall into the vulgar mistake of dreaming that I am persecuted whenever I am contradicted. -Ralph Waldo Emerson",
+				
+				"And so being young and dipped in folly, I fell in love with melancholy. -Edgar Allen Poe",
+				
+				"The child who is not embraced by the village will burn it down to feel it's warmth. -African Proverb",
+				
+				"When we speak we are afraid our words will not be heard or welcomed. But when we are silent, we are still afraid. " +
+				"So it is better to speak remembering we were never meant to survive. -Audre Lorde",
+				
+				"If you always do what interests you, at least one person is pleased. -Katherine Hepburn",
+				
+				"Don't ask me stupid questions and I won't hurt your stupid feelings. -Joan Crawford",
+				
+				"If you are neutral in situations of injustice, you have chosen the side of the oppressor. -Desmond Tutu",
+				
+				"The task is to transform society; only the people can do that - not heroes, not celebrities, not stars. -Huey P. Newton",
+				
+				"I may not have gone where I intended to go, but I think I've ended up where I needed to be. -Douglas Adams",
+				
+				"Never be limited by other people's limited imaginations. -Dr. Mae Jemisin",
+				
+				"We all have a certain measure of responsibility to those who have made it possible for us to " +
+				"take advantage of today's opportunities. -Angela Davis",
+				
+				"No person is your friend who demands your silence or denies your right to grow. -Alice Walker",
+				
+				"If you can't fly, then run. If you can't run, then walk. If you can't walk, then crawl. " +
+				"But whatever you do, keep moving. -Dr. Martin Luther King Jr.",
+				
+				"In love, it is better to know and be disappointed, than to not know and always wonder. -Oscar Wilde",
+				
+				"Don't let the fear of the time it will take to accomplish something stand in the way of your doing it. " +
+				"The time will pass anyway; we might just as well put that passing time to the best possible use. -Earl Nightingale",
+				
+				"I have more respect for a man who lets me know where he stands, even if he's wrong. " +
+				"Than the one who comes up like an angel and is nothing but the devil. -Malcolm X",
+				
+				"Few things help an individual more than to place responsibility upon him, " +
+				"and to let him know that you trust him. -Booker T. Washington",
+				
+				"Who are you to judge the life I live? I know I'm not perfect and I don't live to be, " +
+				"but before you start pointing fingers, make sure your hands are clean. -Bob Marley",
+				
+				"If you're not careful, the newspapers will have you hating the people who are being oppressed, " +
+				"and loving the people who are doing the oppressing. -Malcolm X",
+				
+				"You don't start out writing good stuff. You start out writing crap and thinking it's good stuff, " +
+				"and then gradually you get better at it. -Octavia Butler",
+				
+				"A painting is music you can see, and music is a painting you can hear. -Miles Davis",
+				
+				"One cannot be prepared for something while secretly believing it will not happen. -Nelson Mandela",
+				
+				"The violence is not new, it's the cameras that are new. -Ta-Nehisi Coates",
+				
+				"These are all our children. We will profit by, or pay for whatever they become. -James Baldwin",
+				
+				"No pride for some of us without liberation for all of us. -Marsha P. Johnson",
+				
+				"If you are silent about your pain, they'll kill you and say you enjoyed it. -Zora Neale Hurston",
+				
+				"We are the ones we've been waiting for. -June Jordan",
+				
+				"...to be a 'feminist' in any authentic sense of the term is to want for all people, female and male, " +
+				"liberation from sexist role patterns, domination, and oppression. -bell hooks",
+				
+				"If they come for me in the moring they will come for you in the night. -Angela Davis",
+				
+				"I do not need my freedom when I'm dead... I cannot live on tomorrow's bread. -Langston Hughes",
+				
+				"Nothing can dim the light that shines from within. -Maya Angelou",
+				
+				"Fear is a disease that eats away at logic and makes man inhuman -Marian Anderson",
+				
+				"Challenges make you discover things about yourself that you never really knew. -Cicely Tyson",
+				
+				"Today's mighty oak is yesterday's nut that held it's ground. -Rosa Parks",
+				
+				"Facts do not cease to exist because they are ignored. -Aldous Huxley",
+				
+				"Men are afraid that women will laugh at them. Women are afraid that men will kill them. -Margaret Atwood",
+				
+				"When you are consumed by thoughts, write. When you are uninspired, read. -Stephen King",
+				
+				"I am no longer accepting the things I cannot change. I am changing the things I cannot accept. -Angela Davis",
+				
+				"Nobody in the world, nobody in history, has gotten their freedom by appealing to the moral " +
+				"sense of the people who were oppressing them. -Assata Shakur",
+				
+				"Never forget that intelligence rules the world and ignorance carries the burden. " +
+				"Therefore, remove yourself as far as possible from ignorance and seek as far as possible to be intelligent. -Marcus Garvey",
+				
+				"We revolt simply because, for many reasons, we can no longer breathe. -Frantz Fanon",
+				
+				"Daring to set boundaries is about having the courage to love ourselves even when we risk disappointing others. -Brené Brown",
+				
+				"If you dare to struggle you dare to win. If you dare not struggle, then damn it, you don't deserve to win. -Fred Hampton",
+				
+				"We can disagree and still love each other... unless your disagreement is rooted in my oppression " +
+				"and denial of my humanity and right to exist. -James Baldwin",
+				
+				"Always takes sides. Neutrality helps the oppressor, never the victim. Silence encourages " +
+				"the tormentor never the tormented. -Elie Wiesel",
+				
+				"We are going to emancipate ourselves from mental slavery because whilst others might free the body, " +
+				"none but ourselves can free the mind. -Marcus Garvey",
+				
+				"Man, sometimes it takes you a long time to sound like yourself. -Miles Davis",
+				
+				"Outside of a dog, a book is man's best friend. Inside of a dog it's too dark to read. -Groucho Marx",
+				
+				"You can never do a kindness too soon, for you never know how soon it will be too late. -Ralph Waldo Emerson",
+				
+				"I don't trust anyone who is nice to me but rude to the waiter. -Muhammad Ali",
+				
+				"Always remember that the crowd that applauds your coronation is the same crowd that will applaud your beheading. " +
+				"People like a show. -Terry Pratchett",
+				
+				"I am a fool with a heart, but no brains, and you are a fool with brains, but no heart; " +
+				"and we're both unhappy, and we both suffer. -Fyodor Dostoevsky",
+				
+				"Those who do not move, do not notice their chains. -Rosa Luxemburg",
+				
+				"People will forget what you said, people will forget what you did, but people will never forget how you made them feel. -Maya Angelou",
+				
+				"Never pick a fight with an ugly person, they've got nothing to lose. -Robin Williams",
+				
+				"When a man gives his opinion, he's a man. When a woman gives her opinion, she's a bitch. -Bette Davis",
+				
+				"Just because you do not take an interest in politics doesn't mean politics won't take an interest in you. -Pericles",
+				
+				"Be happy with what you have while working for what you want. -Hellen Keller",
+				
+				"Until you get comfortable with being alone, you'll never know if you're choosing someone out of love or lonliness. -Mandy Hale",
+				
+				"The biggest coward is a man who awakens a woman's love with no intention of loving her. -Bob Marley",
+				
+				"If you wouldn't say it to a friend, don't say it to yourself. -Jane Travis",
+				
+				"Art is how we decorate space, music is how we decorate time. -Jean-Michel Basquiat",
+				
+				"It is often said that before you die your life passes before your eyes. It is in fact true. It's called living. -Terry Pratchtt",
+				
+				"In the beginning, the universe was created. " +
+				"This made a lot of people very angry and has been widely regarded as a bad move. -Douglas Adams",
+				
+				"I want to stand as close to the edge as I can without going over. " +
+				"Out on the edge you see all the kinds of things you can't from the center. -Kurt Vonnegut",
+				
+				];
+		
+		
+		// Sentence Index starts at 0
+			let currentSentenceIndex = 0;
+		
+		// myButton and output 
+			const printButton = document.getElementById("myButton");
+			const outputParagraph = document.getElementById("output");
+
+		// Behavior of button on "click"
+			printButton.addEventListener("click", function() {
+			if (currentSentenceIndex < sentences.length) {
+				outputParagraph.textContent = sentences[currentSentenceIndex];
+				currentSentenceIndex++;
+			} else {
+				outputParagraph.textContent = "TA-DA!";
+			}
+			});
+
+	</script>
+	
+</html>

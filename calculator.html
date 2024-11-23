@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!--		
+		Title: Calculator
+		Description: I better have coded a functional calculator.
+		Created by: Camille Crawford
+		Created on: November 18, 2024
+-->
+<html lang ="en">
+	<head>
+        <meta charset="utf-8">
+		<meta name="author" content="Camille Crawford">
+		<meta name="viewport" content="width-device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="index.css">
+		<title>Calculator</title>
+		<link rel="icon" type="image/x-icon" href="art/cnLogo.PNG">
+		
+		<style>
+			* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			} 
+			
+			body {
+			min-height: 100vh; 
+			background: white;
+	<!--		display: flex; -->
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 20px;
+			margin-top: 20px;
+			padding-inline-start: 50px;
+			padding-inline-end: 50px;
+
+			} 
+			
+			.calculator {
+			width: 300px;
+			height: 500px;
+			box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+			border-radius: 12px;
+			background: #222522;
+			overflow: hidden;
+			}
+			
+			form input {
+			width: 100%;
+			height: 75px;
+			border: none;
+			border-radius: 12px;
+			font-size: 2rem;
+			padding: 1rem;
+			color: #fff;
+			background: #000;
+			text-align: right;
+			pointer-events: none;
+			}
+			
+			.button {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			padding: 20px;
+			}
+			
+			button {
+			flex: 0 0 22%;
+			margin: 5px 0;
+			border: 1px solid #000;
+			width: 60px;
+			height: 52px;
+			font-size: 22px;
+			font-weight: 600;
+			border-radius: 5px;
+			cursor: pointer;
+			}
+			
+			.btn-yellow {
+			background: rgb(245, 146, 62);
+			color: #fff;
+			}
+			
+			.btn-grey {
+			background: rgb(224, 224, 224);
+			color: #000;
+			}
+			
+			.btn-equal {
+			background: green;
+			color: #fff;
+			}
+			
+			.btn-clear {
+			background: red;
+			color: #fff;
+			}
+			
+			.container {
+			position: relative;
+			}
+			
+/* LISTS UL AND LI */
+
+/* Styles for navigation bars */
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #40b5cc;
+  letter-spacing: 1.5px;
+}
+ 
+li {
+  float: left;
+  font-family: Arial, Verdana, sans-serif;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #5fdecf;
+}
+
+/* HEADINGS */
+h1 {
+	color: black;
+	font-family: Arial, Verdana, sans-serif;
+	text-align: center;
+	padding: 14px 40px;
+	border-radius: 25px;
+}
+
+h2 {
+	color: black;
+	font-family: Arial, Verdana, sans-serif;
+	text-align: center;
+}
+
+h3 {
+	color: black;
+	font-family: Arial, Verdana, sans-serif;
+	text-align: center;
+}
+
+h4 {
+	color: black;
+	font-family: Arial, Verdana, sans-serif;
+	text-align: center;
+}
+
+p {
+	color: black;
+	font-family: Arial, Verdana, sans-serif;
+}
+
+/* Styles for text*/
+input[type="text"] {
+	border: 2px solid black;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 14px 40px;
+	font-size: 20px;
+	font-family: Arial, Verdana, sans-serif;
+	font-weight: bold;
+}
+
+section {
+	margin: auto;
+	justify-content: center;
+	font-size: 3rem;
+	border: 2px solid #000000;
+	padding: 14px 16px;
+}
+
+form {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	color: black;
+	text-align: center;
+	position: static;
+	font-size: 20px;
+}
+
+form label {
+	font-size: 20px;
+	font-style: bold;
+}
+
+/* CLASSES */
+.container {
+	position: relative;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+		</style>
+		
+	</head>
+	
+	<body>
+		<div id="container">
+			<header>
+			<br>
+			<div>
+				<h1>SIMPLE CALCULATOR</h1>
+				<br>
+				<h3>Examples of HTML, CSS, and JavaScript skills</h3>
+				<br>
+				<h4>Camille Crawford</h4>
+				<br>
+			</div>
+			</header>
+		</div>
+		
+			<!-- Navigation bar -->
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="clock.html">Clock</a></li>
+				<li><a href="calculator.html" class="active">Calculator</a></li>
+				<li><a href="quotes.html">Quotes</a></li>
+			</ul>
+			<br>
+			<br>
+			
+			<!-- Calculator -->
+			<section class="calculator">
+			
+			<!-- Screen -->
+			<form>
+				<input type="text" class="screen" readonly>
+			</form>
+			
+			<!-- Buttons on calculator -->
+				<div class="button">
+					<button type="button" class="btn btn-yellow" data-num="*">*</button>
+					<button type="button" class="btn btn-yellow" data-num="/">/</button>
+					<button type="button" class="btn btn-yellow" data-num="-">-</button>
+					<button type="button" class="btn btn-yellow" data-num="+">+</button>
+					<button type="button" class="btn btn-grey" data-num="9">9</button>
+					<button type="button" class="btn btn-grey" data-num="8">8</button>
+					<button type="button" class="btn btn-grey" data-num="7">7</button>
+					<button type="button" class="btn btn-grey" data-num="6">6</button>
+					<button type="button" class="btn btn-grey" data-num="5">5</button>
+					<button type="button" class="btn btn-grey" data-num="4">4</button>
+					<button type="button" class="btn btn-grey" data-num="3">3</button>
+					<button type="button" class="btn btn-grey" data-num="2">2</button>
+					<button type="button" class="btn btn-grey" data-num="1">1</button>
+					<button type="button" class="btn btn-grey" data-num="0">0</button>
+					<button type="button" class="btn btn-grey" data-num=".">.</button>
+					<button type="button" class="btn btn-equal">=</button>
+					<button type="button" class="btn btn-clear">C</button>
+				</div>
+			</section>
+	</body>
+	
+	<script>
+	/* https://medium.com/@kshitijsharma94/building-a-simple-calculator-with-html-css-and-javascript-1bda25ce3d80 */
+	
+	
+	/* Selects the HTML element with the class xyz (the input field) and assigns it to the xyz variable*/
+		(function() {
+			let screen = document.querySelector('.screen');
+			let buttons = document.querySelectorAll('.btn');
+			let clear = document.querySelector('.btn-clear');
+			let equal = document.querySelector('.btn-equal');
+			
+	/* Value of buttons is calculated */		
+		buttons.forEach(function(button) {
+        button.addEventListener('click', function(e) {
+            let value = e.target.dataset.num;
+            if (value !== undefined) {
+                screen.value += value;
+            }
+        });
+    });
+	
+	
+		equal.addEventListener('click', function(e) {
+        if (screen.value === '') {
+            screen.value = "Please enter";
+        } else {
+            try {
+                let answer = eval(screen.value);
+                screen.value = answer;
+            } catch (error) {
+                screen.value = "Error";
+            }
+        }
+    });
+	
+	
+		clear.addEventListener('click', function(e) {
+        screen.value = "";
+    });
+	
+	
+	})()
+	
+	</script>
+	
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<!--		
+		Title: Camille's Colorful Clock
+		Description: Coded a colorful clock with the date and time.
+		Created by: Camille Crawford
+		Created on: October 18, 2024
+-->
+<html lang ="en">
+	<head>
+        <meta charset="utf-8">
+		<meta name="author" content="Camille Crawford">
+		<meta name="viewport" content="width-device-width, initial-scale=1.0">
+		<title>Clock</title>
+		<link rel="icon" type="image/x-icon" href="art/cnLogo.PNG">
+	
+	<style>
+/*
+    Name: Camille Crawford
+	File Name: clock.css
+	Current Date: October 18, 2024
+*/
+
+/* CSS reset */
+body, head, header, main, section, footer, h1, h2, p, h3, btn {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Style for html */
+html {
+	display: flex; 
+	justify-content: center;
+}
+
+/* Styles for navigation bars */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 12px 14px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  background-image: linear-gradient(to right, #f8fa82, #9efa82, #82f4fa);
+  border: 2px solid #000000;
+  border-radius: 20px;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Styles for reset*/
+input[type="reset"] {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	padding: 14px 40px;
+	font-size: 20px;
+	font-family:  "Lucida Console", "Courier New", monospace;
+	font-weight: bold;
+}
+
+/* Style for body */
+body {
+	margin-left: 20px;
+	color: black;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	padding-inline-start: 50px;
+	padding-inline-end: 50px;
+	font-family:  "Lucida Console", "Courier New", monospace;
+	background-color: red; /* For browsers that do not support gradients */
+	background-image: radial-gradient(circle, #f8fa82, #9efa82, #82f4fa);
+	
+}
+
+.container {
+	position: relative;
+}
+
+nav {
+	justify-content: center;
+	text-align: center;
+	color: black;
+	font-family:  "Lucida Console", "Courier New", monospace;
+	
+}
+
+body, html {
+  height: 100%;
+  display: grid;
+}
+
+section {
+	margin: auto;
+	justify-content: center;
+	font-size: 2rem;
+	border: 2px solid #000000;
+	padding: 14px 40px;
+	box-shadow: 0 12px 14px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#top {
+	color: black;
+	font-family:  "Lucida Console", "Courier New", monospace;
+	text-align: center;
+	font-style: bold;
+	background-color: #e8d2ff;
+	border-radius: 25px;
+}
+
+#bottom {
+	color: black;
+	font-family:  "Lucida Console", "Courier New", monospace;
+	text-align: center;
+	font-style: bold;
+	background-color: #e8d2ff;
+	border-radius: 25px;
+}
+
+h1 {
+	color: black;
+	font-family:  "Lucida Console", "Courier New", monospace;
+	text-align: center;
+	padding: 14px 40px;
+	border-radius: 25px;
+}
+
+h2 {
+	color: black;
+	font-family:  "Lucida Console", "Courier New", monospace;
+	text-align: center;
+}
+
+h3 {
+	color: black;
+	font-family:  "Lucida Console", "Courier New", monospace;
+	text-align: center;
+}
+
+h4 {
+	color: black;
+	font-family:  "Lucida Console", "Courier New", monospace;
+	text-align: center;
+}
+
+p {
+	color: black;
+	font-family:  "Lucida Console", "Courier New", monospace;
+}
+
+#txt {
+	color: black;
+	font-family:  "Lucida Console", "Courier New", monospace;
+	text-align: center;
+	font-style: bold;
+}
+
+/* Styles for reset*/
+input[type="reset"] {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	padding: 14px 40px;
+	font-size: 16px;
+	font-family:  "Lucida Console", "Courier New", monospace;
+	font-weight: bold;
+	border: 2px solid black;
+	border-radius: 4px;
+}
+
+/* Styles for footer */
+footer {
+	color: black;
+	font-family:  "Lucida Console", "Courier New", monospace;
+	text-align: center;
+}
+	</style>
+	
+	</head>
+	 
+	<body onload="startTime()">
+		<div id="container">
+			<header>
+			<div id="name">
+				<h1>CAMILLE'S COLORFUL CLOCK</h1>
+			</div>
+			</header>
+			<br>
+		</div>
+		
+		<!-- Navigation bar -->
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="clock.html" class="active">Clock</a></li>
+				<li><a href="calculator.html">Calculator</a></li>
+				<li><a href="quotes.html">Quotes</a></li>
+			</ul>
+			<br>
+			<br>
+		
+		<div id="txt"></div>
+		
+		<section id="top">
+			<h3 id="day"></h3>
+			<h3 id="month"></h3>
+			<h3 id="date"></h3>
+			<h3 id="year"></h3>
+			<br>
+		</section>
+		<br>
+		<section id="bottom">
+			<h3 id="clock12"></h3>
+			<br>
+			<h3 id="clock24"></h3>
+		</section>
+		
+		<br>
+		<script>
+		// DATE
+		
+		//ARRAY FOR DAY
+			const days = [
+			"Sunday",
+			"Monday",
+			"Tuesday",
+			"Wednesday", 
+			"Thursday",
+			"Friday",
+			"Saturday"
+			]
+			
+		//ARRAY FOR MONTH	
+			const months = [
+			"January",
+			"February",
+			"March",
+			"April",
+			"May",
+			"June",
+			"July",
+			"August",
+			"September",
+			"October",
+			"November",
+			"December"
+			];
+			
+			
+			const d = new Date();
+				// Day of the week
+				let day = days[d.getDay()];
+				document.getElementById("day").innerHTML = day;
+				
+				// Month of the year
+				let month = months[d.getMonth()];
+				document.getElementById("month").innerHTML = month;
+				
+				// Date of the month
+				document.getElementById("date").innerHTML = d.getDate();
+				// Year 
+				document.getElementById("year").innerHTML = d.getFullYear();
+				
+			// TIME
+			const clock12 = document.getElementById('clock12')
+			const clock24 = document.getElementById('clock24')
+
+			// Concatenate a zero to the left of every single digit time frame
+			function concatZero(timeFrame) {
+				return timeFrame < 10 ? '0'.concat(timeFrame) : timeFrame
+			}
+
+			function realTime() {
+				let date = new Date()
+				let sec = date.getSeconds()
+				let mon = date.getMinutes()
+				let hr = date.getHours()
+				
+				// 12 hour time
+				// If the hour equals 0 or 12, the remainder equals 0, so output 12 instead. (0 || 12 = 12)
+				clock12.textContent = `${concatZero((hr % 12) || 12)} : ${concatZero(mon)} : ${concatZero(sec)} ${hr >= 12 ? 'PM' : 'AM'}`
+				
+				// 24 hour time
+				clock24.textContent = `${concatZero(hr)} : ${concatZero(mon)} : ${concatZero(sec)}`
+			}
+
+			setInterval(realTime, 1000)
+		</script>
+		<br>
+		<footer>
+		</footer>
+	</body>
+	
+</html>
